@@ -1,0 +1,15 @@
+﻿@using WebApplication5.Models
+@model IEnumerable <Userr>
+@{
+    ViewBag.Title = "AutorizatonPage";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Эту страницу видят только зарегестрированные пользователи.</h2>
+<table class="table">
+    @foreach (Userr p in Model)
+    {
+        <tr><td>@p.FullName</td><td>@p.birthdate</tr>
+    }
+</table>
+
